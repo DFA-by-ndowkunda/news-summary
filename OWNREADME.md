@@ -21,19 +21,20 @@ npm start
 ```
 
 ## Problem Approach 
-1. 
-```
+1. Domain model
+
+![on load user sees]("./images/on-load domain model.png")
+![on clicking article headline user sees]("./images/view-summary domain model.png")
+![on clicking article summary title user sees]("./images/view-whole-article domain model.png")
 
 ```
 
-2. 
-
 ```
+2. feature test
 
-```
-
+3. creating components 
 ### tests
- This project used cypress
+ This project uses cypress for it's feature tests
 
 ## Usage
 
@@ -42,4 +43,3 @@ npm start
 - Guardian newspaper API homepage
 - Aylien text summary API docs
 -	cURL man page
-- Hurl a web interface for sending HTTP requests
