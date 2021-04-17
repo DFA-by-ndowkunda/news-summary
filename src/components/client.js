@@ -1,0 +1,5 @@
+const Client = {
+  getClient() {
+
+  }
+}
