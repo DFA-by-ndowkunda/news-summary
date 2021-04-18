@@ -23,9 +23,9 @@ npm start
 ## Problem Approach 
 1. Domain model
 
-![on load user sees]("./images/on-load domain model.png")
-![on clicking article headline user sees]("./images/view-summary domain model.png")
-![on clicking article summary title user sees]("./images/view-whole-article domain model.png")
+![on load user sees]("./images/on-load domain model.PNG")
+![on clicking article headline user sees]("./images/view-summary domain model.PNG")
+![on clicking article summary title user sees]("./images/view-whole-article domain model.PNG")
 
 ```
 
