@@ -1,12 +1,11 @@
 import './App.css';
-import Headlines from './components/headlines.js'
+import HeadlinesList from './components/headlines.js'
 
 function App() {
   return (
     <div className="App">
-      <Headlines />
+      <HeadlinesList />
     </div >
   );
 }
-
 export default App;

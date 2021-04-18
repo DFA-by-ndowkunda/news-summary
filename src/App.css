@@ -1,3 +1,28 @@
+/* For mobile display */
+  @media (max-width: 800px){ 
+    .headlines-list-title {
+    font-size: 10px;
+      }
+    .headlines-list-img {
+    max-width: 75%;
+      }
+  }
 .App {
-  text-align: center;
+font-family: "Guardian Text Egyptian Web", Georgia, serif; 
+}
+.HeadlinesList {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#article{
+  align-items: flex-end;
+}
+.headlines-list-title{
+  padding: 7px;
+}
+.headlines-list-img:hover {
+ cursor:pointer;
+ opacity: 60%;
 }

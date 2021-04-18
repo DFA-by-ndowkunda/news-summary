@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import Image from './image'
 
-class Headlines extends Component {
+class HeadlinesList extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -9,7 +8,7 @@ class Headlines extends Component {
     }
   }
   componentDidMount() {
-    fetch(`https://content.guardianapis.com/search?order-by=newest&show-fields=all&q=politics&api-key=${process.env.REACT_APP_GUARDIAN_API_KEY}`)
+    fetch(`https://content.guardianapis.com/search?api-key=${process.env.REACT_APP_GUARDIAN_API_KEY}&order-by=newest&show-fields=thumbnail&q=politics`)
       .then(res => res.json())
       .then(data => data.response.results)
       .then(parsedData => this.setState({
@@ -19,17 +18,14 @@ class Headlines extends Component {
 
   render() {
     return (
-      <div>
-        <div id="headline-title" data-cy="headline">
-          {this.state.headlines.map((article, index) => (
-            <h1 key={index}>{article.fields.headline}</h1>))}
-        </div>
-        <div id="headline-title" data-cy="headline">
-          {this.state.headlines.map((article, index) => (
-            <img key={index} src={article.fields.thumbnail} />))}
-        </div>
+      <div id="headline-list">
+        {this.state.headlines.map((article, index) => (
+          <div id="article">
+            <span className="headlines-list-title" data-cy="headline-title" ><h1 key={index}>{article.webTitle}</h1></span>
+            <span className="headlines-list-img" data-cy={`headline-${index}`}><img key={index} src={article.fields.thumbnail} /></span>
+          </div>))}
       </div>
     )
   }
 }
-export default Headlines
+export default HeadlinesList
